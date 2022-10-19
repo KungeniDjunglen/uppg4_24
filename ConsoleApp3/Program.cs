@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace program
 {
@@ -6,25 +6,23 @@ namespace program
     {
         static void Main(string[] args)
         {
-            int n = 1;
-            bool b = true;
-            for(int i = 10; b == true; i = i + n)
+            for(int i = 0; i <= 100; i++)
             {
-                Console.WriteLine(i);
-                switch (i)
+                if (i % 3 == 0 && i % 5 == 0)
                 {
-                    case 30:
-                        i = 200;
-                        n = -1;
-                        break;
-                    case 180:
-                        i = 1000;
-                        n = 50;
-                        break;
-                    case 1400:
-                        b = false;
-                        break;
-
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else if (i % 3 == 0 )
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
 
                 }
             }
